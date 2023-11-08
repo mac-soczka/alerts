@@ -6,8 +6,8 @@ A Telegram mini App that monitors changes in cryptocurrency prices and sends ale
 # Structure
 
 The solution has four components:
-- bot - React + JavaScript + NodeJs
-- web app - React + TypeScript + [Telegram Web App SDK](https://core.telegram.org/bots/webapps)
+- bot - JavaScript + NodeJs + [Telegraf](https://www.npmjs.com/package/telegraf) 
+- web app - TypeScript + React + [Telegram Web App SDK](https://core.telegram.org/bots/webapps)
 - api - Python + Flask + SQLite
 - spider - Python
 
