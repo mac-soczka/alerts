@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "597dd4d9-310c-4be5-b10d-01f263f04924",
+		"name": "Alert_Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "680063"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cryptocurrency\": \"ETH\",\r\n    \"trigger_value\": 100,\r\n    \"trigger_type\": \"value_change\",\r\n    \"user_id\" : \"mac\",\r\n    \"expires_at\": \"2023-12-31T23:59\",\r\n    \"exchange_currency\": \"USD\",\r\n    \"base_value\": 2000.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/alerts",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"alerts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "trigger",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/trigger",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"trigger"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "trigger - external",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://f9bb-82-43-212-31.ngrok-free.app/trigger",
+					"protocol": "https",
+					"host": [
+						"f9bb-82-43-212-31",
+						"ngrok-free",
+						"app"
+					],
+					"path": [
+						"trigger"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "prices-create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cryptocurrency\": \"ETH\",\r\n    \"value\" : \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/prices",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"prices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cryptocurrency\": \"ETH\",\r\n    \"trigger_value\": 541.1234,\r\n    \"trigger_type\": \"value_change\",\r\n    \"user_id\" : \"mac\",\r\n    \"expires_at\": \"2029-05-31T23:59\",\r\n    \"exchange_currency\": \"USD\",\r\n    \"base_value\": 300.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/alerts/2",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"alerts",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-error-1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cryptocurrency\": \"ETH\",\r\n    \"trigger_value\": 20000,\r\n    \"trigger_type\": \"amount\",\r\n    \"user_id\" : \"mac\",\r\n    \"duration\": \"22 days 10h\",\r\n    \"exchange_currency\": \"USD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/alerts",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"alerts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/alerts/10",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"alerts",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/alerts",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"alerts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all for user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "UserId",
+						"value": "5852786190s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/alerts",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"alerts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "prices-get-last",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/alerts",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"alerts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/alerts/3",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"alerts",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

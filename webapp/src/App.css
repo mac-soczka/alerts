@@ -1,0 +1,53 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+   background-color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.alert-list {
+  max-width: 350px;
+  margin: 0 auto;
+  min-width: 350px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin: 10px 10px;
+}
+
+h2 {
+  margin: 10px 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.overdue {
+  border-color: #ff6347; 
+}
+
+.due-date {
+  color: #888;
+}

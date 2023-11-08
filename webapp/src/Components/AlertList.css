@@ -1,0 +1,95 @@
+.alert-details select,
+.alert-details input,
+.alert-details input[type="datetime-local"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.alert-details select {
+  cursor: pointer;
+}
+
+.alert-details strong {
+  margin-right: 5px;
+}
+
+.alert-details p {
+  margin: 10px 0;
+}
+
+.alert-actions {
+  margin-top: 10px;
+}
+
+.alert-actions-delete {
+  display: flex;
+  flex-direction: column;
+}
+
+.alert-actions-delete .btn-delete {
+  background-color: #d9534f;
+}
+
+.alert-actions-delete .btn-delete:hover {
+  background-color: #c9302c;
+}
+
+.alert-actions button {
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 5px 5px;
+}
+.alert-list li {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+
+}
+
+.alert-actions button:hover {
+  background-color: #0b7dda;
+}
+
+.alert-list li.editing {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+
+.alert-list li:not(.editing) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.alert-list li:not(.editing) p {
+  margin: 0;
+}
+
+.alert-list li:not(.editing) .alert-details {
+  flex: 1;
+}
+
+.alert-list li:not(.editing) .alert-actions {
+  flex-shrink: 0;
+}
+
+.alert-actions button.cancel {
+  background-color: #d9534f;
+}
+
+.alert-actions button.cancel:hover {
+  background-color: #c9302c;
+}
