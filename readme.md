@@ -16,6 +16,8 @@ The solution has four components:
 # Deployment
  https://t.me/intenzia2bot/app2
 
+ `/alert` to launch the app
+
 # Telegram bot name
 @intenzia2bot
 
