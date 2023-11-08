@@ -1,14 +1,15 @@
 # Cryptocurrency Alerts
 
 For demonstration purposes only.
+A Telegram mini App that monitors changes in cryptocurrency prices and sends alerts via Telegram bot.
 
 # Structure
 
 The solution has four components:
-- bot
-- web app
-- api
-- spider
+- bot - React + JavaScript + NodeJs
+- web app - React + TypeScript + [Telegram Web App SDK](https://core.telegram.org/bots/webapps)
+- api - Python + Flask + SQLite
+- spider - Python
 
 ![bot-3](https://github.com/maciej-soczka/alerts/assets/4355310/97bb457d-104f-446a-a912-32f5bc083d74)
 
