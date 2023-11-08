@@ -14,7 +14,7 @@ The solution has four components:
 ![bot-3](https://github.com/maciej-soczka/alerts/assets/4355310/97bb457d-104f-446a-a912-32f5bc083d74)
 
 # Deployment
- https://t.me/intenzia2bot/app2
+ [https://t.me/intenzia2bot/app2](https://t.me/intenzia2bot/app2)
 
  `/alert` to launch the app
 
